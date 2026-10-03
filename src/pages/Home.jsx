@@ -10,7 +10,7 @@ const Home = () => {
     useEffect(() => {
         const fetchProducts = async () => {
       try {
-        const res = await fetch('/api/products');
+        const res = await fetch('https://vastram-backend-fmpu.onrender.com/api/products');
         const data = await res.json();
         setProducts(data.slice(0, 4)); // Featured products
       } catch (error) {

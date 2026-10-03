@@ -8,7 +8,7 @@ const AdminProducts = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch('/api/products');
+      const res = await fetch('https://vastram-backend-fmpu.onrender.com/api/products');
       const data = await res.json();
       setProducts(Array.isArray(data) ? data : []);
     };

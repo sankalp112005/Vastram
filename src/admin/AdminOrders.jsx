@@ -7,7 +7,7 @@ const AdminOrders = () => {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const res = await fetch('/api/orders', {
+      const res = await fetch('https://vastram-backend-fmpu.onrender.com/api/orders', {
         headers: { Authorization: `Bearer ${user.token}` }
       });
       const data = await res.json();
