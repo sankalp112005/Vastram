@@ -27,7 +27,7 @@ const createOrder = async (req, res) => {
         <p>Thank you for shopping with ShopNest!</p>
       `;
 
-      await sendEmail(req.user.email, 'order created',message);
+      await sendEmail({ to: req.user.email, subject: 'Order created', text: message });
         
       res.status(201).json({message: "createdOrder succesfully",order});
     }
